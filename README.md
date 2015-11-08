@@ -1,0 +1,2 @@
+# Discrete-Math
+Useful scripts when working with Discrete Mathematics
