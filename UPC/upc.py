@@ -43,8 +43,6 @@ def findCheckDigit(sumOf11Digits):
    return -1 
 
 def main():
-   # using raw_input because of octal problem (starting with 0)
-   # Ex: str(089) will be an error because octal does not have 8 or 9
    stringOfDigits = getStringOfDigits() 
    if checkDigits(stringOfDigits):
       print(findCheckDigit(getSum(stringOfDigits)))
