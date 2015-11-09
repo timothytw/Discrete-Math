@@ -13,6 +13,14 @@ Therefore, 123 is evaluated as 3(1)+2+3(3)+0+3(0)...+3(0) = 14
 
 Will return -1 if no number is found which means the string of digits is not valid
 '''
+# check if using python2/3
+def getStringOfDigits():
+   try:
+      stringOfDigits = raw_input("Enter Code: ")
+   except NameError:
+   # python3 input() is the python2 raw_input()
+      stringOfDigits = input("Enter Code: ") 
+   return stringOfDigits
 
 def checkDigits(stringOfDigits):
    return len(stringOfDigits) == 11
@@ -37,7 +45,7 @@ def findCheckDigit(sumOf11Digits):
 def main():
    # using raw_input because of octal problem (starting with 0)
    # Ex: str(089) will be an error because octal does not have 8 or 9
-   stringOfDigits = raw_input("Enter Code: ")
+   stringOfDigits = getStringOfDigits() 
    if checkDigits(stringOfDigits):
       print(findCheckDigit(getSum(stringOfDigits)))
    else:
