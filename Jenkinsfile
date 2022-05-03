@@ -17,6 +17,7 @@ node () {
 	stage ('discrete-math - Build') {
 		sh """ 
 			echo "The shell works!" 
+			echo "New change" 
 		""" 
 	}
 }
